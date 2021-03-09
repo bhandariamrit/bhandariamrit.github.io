@@ -1,5 +1,4 @@
-# bhandariamrit.github.io/memory-matching-game-anime
-
+# bhandariamrit.github.io
 # Memory_Matching_Game_Project
 This is the Memory Matching Game Anime version. One piece is my favorite Anime, so I decided this to use it's characters.
 
