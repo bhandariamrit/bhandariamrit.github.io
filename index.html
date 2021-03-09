@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Memory Matching Game</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Memory Matching Game</h2>
+        <h3>Score Board</h3>
+
+        <p class="timer-track"><b>Timer</b></p>
+        <h3 class="timer"> 00:00
+        </h3>
+        <div class="move-container ">
+            <div class="move"><b>Move</b></div>
+
+            <h3><span class="count " id="count ">0</span></h3>
+        </div>
+        <!-- Start Count
+            <div class="rating " id="star-rating">
+                <span class="star ">☆</span>
+                <span class="star ">☆</span>
+                <span class="star ">☆</span>
+            </div> -->
+        <!-- Main game Board -->
+        <section class="memory-game" id="cardClick ">
+            <div class="memory-card" data-framework="luffy ">
+                <img class="front-face" src="./Images/luffy.png " alt="luffy " />
+                <img class="back-face" src="./Images/backFace.png " alt="onepiece ">
+            </div>
+            <div class="memory-card" data-framework="luffy ">
+                <img class="front-face" src="./Images/luffy.png " alt="luffy " />
+                <img class="back-face" src="./Images/backFace.png " alt="onepiece ">
+            </div>
+            <div class="memory-card" data-framework="sanji ">
+                <img class="front-face" src="./Images/sanji.png " alt="sanji " />
+                <img class="back-face" src="./Images/backFace.png " alt="onepiece ">
+            </div>
+            <div class="memory-card" data-framework="sanji ">
+                <img class="front-face" src="./Images/sanji.png " alt="sanji " />
+                <img class="back-face" src="./Images/backFace.png " alt="onepiece ">
+            </div>
+            <div class="memory-card" data-framework="firedUpZoro ">
+                <img class="front-face" src="./Images/firedUpZoro.png " alt="firedUpZoro " />
+                <img class="back-face" src="./Images/backFace.png " alt="onepiece ">
+            </div>
+            <div class="memory-card" data-framework="firedUpZoro ">
+                <img class="front-face" src="./Images/firedUpZoro.png " alt="firedUpZoro " />
+                <img class="back-face" src="./Images/backFace.png " alt="onepiece ">
+            </div>
+            <div class="memory-card " data-framework="robin ">
+                <img class="front-face " src="./Images/robin.png " alt="robin " />
+                <img class="back-face " src="./Images/backFace.png " alt="onepiece ">
+            </div>
+            <div class="memory-card" data-framework="robin ">
+                <img class="front-face" src="./Images/robin.png " alt="robin " />
+                <img class="back-face" src="./Images/backFace.png " alt="onepiece ">
+            </div>
+            <div class="memory-card" data-framework="brook ">
+                <img class="front-face" src="./Images/brook.png " alt="brook " />
+                <img class="back-face" src="./Images/backFace.png " alt="onepiece ">
+            </div>
+            <div class="memory-card" data-framework="brook ">
+                <img class="front-face" src="./Images/brook.png " alt="brook " />
+                <img class="back-face" src="./Images/backFace.png " alt="onepiece ">
+            </div>
+            <div class="memory-card" data-framework="chopper ">
+                <img class="front-face" src="./Images/chopper.png " alt="chopper " />
+                <img class="back-face" src="./Images/backFace.png " alt="onepiece ">
+            </div>
+            <div class="memory-card" data-framework="chopper ">
+                <img class="front-face" src="./Images/chopper.png " alt="chopper " />
+                <img class="back-face" src="./Images/backFace.png " alt="onepiece ">
+            </div>
+        </section>
+        <!-- Winning Modal -->
+        <div class="modal" tabindex="-1" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Congratulations</h5>
+
+                    </div>
+                    <div class="modal-body">
+                        <p>You Made it.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="reset()">Replay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Reset Button -->
+    <section class="reset-btn">
+        <button class="reset " id="btn-reset" onclick="reset()">Restart</button>
+
+
+    </section>
+    <script src="index.js " async defer></script>
+</body>
+
+</html>
