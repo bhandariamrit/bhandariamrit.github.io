@@ -1,133 +1,146 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
-    background: rgb(232, 232, 243);
-    display: flex;
-}
-
-.memory-game {
-    width: 640px;
-    height: 640px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10px;
-    padding: 120px;
-    perspective: 1000px;
-    position: absolute;
-    top: 20px;
-    left: 600px;
-}
-
-.memory-card {
-    width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
-    position: relative;
-    margin: 5px;
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    cursor: pointer;
-}
-
-.memory-card:active {
-    transform: scale(0.97);
-    transition: transform 0.2;
-}
-
-.front-face,
-.back-face {
-    position: absolute;
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    background: #7f9ab1;
-    backface-visibility: hidden;
-}
-
-.front-face {
-    transform: rotateY(180deg);
-}
-
-.memory-card.flip {
-    transform: rotateY(180deg);
-}
-
-h2 {
-    position: absolute;
-    top: 15px;
-    left: 800px;
-    font-size: 200%;
-    text-align: center;
-}
-
-h3 {
-    position: absolute;
-    top: 60px;
-    left: 880px;
-    font-size: 100%;
-}
-
-.timer {
-    position: absolute;
-    top: 100px;
-    left: 780px;
-    padding: 5px 5px;
-}
-
-.move-container {
-    position: absolute;
-    top: 70px;
-    left: 250px;
-}
-
-p {
-    position: absolute;
-    top: 110px;
-    left: 770px;
-}
-
-.timer-track {
-    position: absolute;
-    top: 110px;
-    left: 720px;
-}
-
-
-/* .rating {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        height: 100vh;
+        display: flex;
+    }
+    
+    .memory-game {
+        width: 640px;
+        height: 640px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px;
+        padding: 120px;
+        perspective: 1000px;
+        position: absolute;
+        top: 20px;
+        left: 400px;
+    }
+    
+    .memory-card {
+        width: calc(25% - 10px);
+        height: calc(33.333% - 10px);
+        position: relative;
+        margin: 5px;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+        cursor: pointer;
+    }
+    
+    .memory-card:active {
+        transform: scale(0.97);
+        transition: transform 0.2;
+    }
+    
+    .back-face:hover {
+        background-color: #34495e;
+    }
+    
+    .front-face,
+    .back-face {
+        position: absolute;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background: #7f9ab1;
+        backface-visibility: hidden;
+    }
+    
+    .front-face {
+        transform: rotateY(180deg);
+    }
+    
+    .memory-card.flip {
+        transform: rotateY(180deg);
+    }
+    
+    h2 {
+        position: absolute;
+        top: 15px;
+        left: 590px;
+        font-size: 200%;
+        text-align: center;
+        color: #1abc9c;
+    }
+    
+    h3 {
+        position: absolute;
+        top: 60px;
+        left: 680px;
+        font-size: 100%;
+        color: #1abc9c;
+    }
+    
+    .timer {
+        position: absolute;
+        top: 100px;
+        left: 580px;
+        padding: 5px 5px;
+        color: #2c3e50;
+    }
+    
+    .move-container {
+        position: absolute;
+        top: 70px;
+        left: 50px;
+    }
+    
+    p {
+        position: absolute;
+        top: 110px;
+        left: 770px;
+    }
+    
+    .timer-track {
+        position: absolute;
+        top: 110px;
+        left: 520px;
+        color: #2c3e50;
+    }
+    /* .rating {
 position: absolute;
 top: 100px;
 left: 590px;
 } */
-
-.reset {
-    position: absolute;
-    top: 560px;
-    left: 880px;
-    background-color: #0e1833;
-    border: none;
-    color: ghostwhite;
-    width: 100px;
-    height: 30px;
-    cursor: pointer;
-}
-
-.reset:hover {
-    background-color: #7f9ab1;
-}
-
-.move {
-    position: absolute;
-    top: 40px;
-    left: 820px;
-}
-
-.count {
-    position: absolute;
-    top: -25px;
-}
+    
+    .reset {
+        position: absolute;
+        top: 560px;
+        left: 680px;
+        background-color: #455f75;
+        border: none;
+        color: ghostwhite;
+        width: 100px;
+        height: 30px;
+        cursor: pointer;
+    }
+    
+    .reset:hover {
+        background-color: #34495e;
+    }
+    
+    .move {
+        position: absolute;
+        top: 40px;
+        left: 820px;
+    }
+    
+    .count {
+        position: absolute;
+        top: -25px;
+        left: 200px;
+        color: #2c3e50;
+    }
+    
+    #myModal {
+        position: absolute;
+        top: 60px;
+        left: 90px;
+    }
